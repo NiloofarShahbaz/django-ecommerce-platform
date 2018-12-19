@@ -1,0 +1,106 @@
+@import "variables";
+
+html, body {
+  margin: 0;
+  background: $background-color;
+  font-size: 13px;
+  line-height: 2em;
+}
+
+* {
+  font-family: $text-font;
+  color: $primary-text-color;
+}
+
+.number {
+  font-family: $number-font, $text-font !important;
+}
+
+.brand {
+  font-family: $icon-font !important;
+  font-size: $_navbar-brand-font-size;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+  font-family: $header-font !important;
+  color: $title-text-color;
+}
+
+.text-primary {
+  color: $primary-text-color !important;
+}
+
+.text-secondary {
+  color: $secondary-text-color !important;
+}
+
+.nav-item {
+  font-size: $_navitem-font-size;
+  .nav-link:hover {
+    color: $nav-link-color-hover !important;
+  }
+  .active{
+  color: $nav-link-color-active !important;
+  }
+  .active:hover {
+  color: $nav-link-color-active !important;
+  }
+}
+
+input {
+  border-radius: $radius !important;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+  border: $input-focus-border solid $text-input-focus !important;
+  box-shadow: 0 0 $input-focus-box-shadow $text-input-focus !important;
+}
+
+.btn {
+  font-size: $_navitem-font-size;
+  border-radius: $radius;
+  padding-left: $button-padding !important;
+  padding-right: $button-padding !important;
+}
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.btn-primary:hover {
+  background-color: $primary-color-dark;
+  border-color: $primary-color-dark;
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  color: $primary-text-color;
+}
+
+.btn-secondary:hover {
+  background-color: $secondary-color-dark;
+  border-color: $secondary-color-dark;
+  color: $primary-text-color;
+
+}
+.navbar2 {
+  border-bottom: 2px black;
+}
+
+.breadcrumb{
+  background-color: transparent;
+  .active{
+    color: $breadcrumb-active-color;
+    font-weight: bold;
+  }
+}
+
+a{
+  color: $link-color;
+}
+a:hover{
+  color: $link-color-hover;
+}

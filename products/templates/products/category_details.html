@@ -1,0 +1,33 @@
+{% extends 'products/base.html' %}
+
+{% block breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">خانه</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> {{ category.name }}</li>
+        </ol>
+    </nav>
+{% endblock breadcrumb %}
+{% block page_title %}
+    <h2 class="text-right">{{ category.name }}</h2>
+    <p class="text-right">{{ category.description }}</p>
+{% endblock page_title %}
+
+{% block subcategory %}
+    <div class="col-md-9">
+        <div class="row pr-5">
+            <div class="col-12 pr-0">
+                <h4 class="text-right">دسته بندی ها</h4>
+            </div>
+            {% for subcategory in subcategories %}
+                <div class="card col-md-2 ml-3 mb-3 px-0 ">
+                    <img class="card-img-top" src="{{ subcategory.image.url }}" style="height: 10rem;">
+                    <div class="card-body text-right">
+                        <h5 class="card-title">{{ subcategory.name }}</h5>
+                        <a href="#">مشاهده همه</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock subcategory %}

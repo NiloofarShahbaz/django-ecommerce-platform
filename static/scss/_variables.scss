@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'IRANSans-Bold';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'IRANSans-Regular';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Regular.ttf") format("truetype");
+  font-weight: normal !important;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IRANSans-PersianNumbers';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Persian_Numbers.otf") format("opentype");
+  font-style: normal;
+  unicode-range: U+0030-003A;
+}
+
+@font-face {
+  font-family: 'A-Negaar';
+  src: url("/static/fonts/ANegaar.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+
+// Fonts
+$text-font: IRANSans-Regular;
+$header-font: IRANSans-Bold;
+$number-font: IRANSans-PersianNumbers;
+$icon-font : A-Negaar;
+
+
+//Font Sizes
+$_navbar-brand-font-size: 3rem;
+$_navitem-font-size: 1.1rem;
+
+//colors
+$_green: #74BC04;
+$_green_dark_1_level: #5d9504;
+$_green_light : #A8E83A;
+$_green_with_gray_light: #69833f;
+$_green_with_gray: #65744e;
+$_green_with_gray_dark: #616161;
+
+$_white: #ffffff;
+$_white-smoke: #f5f5f5;
+$_white-snow: #fdfdfd;
+$_white-dark-1-level: #d9d9d9;
+$_washed-black: #111111;
+
+
+$background-color: $_white-smoke;
+$primary-text-color: $_washed-black;
+$secondary-text-color: $_green_light;
+$white-text-color: $_white;
+$nav-link-color-hover: $_green;
+$nav-link-color-active:$_green_light;
+$text-input-focus: $_green_light;
+$primary-color: $_green;
+$primary-color-dark: $_green_dark_1_level;
+$secondary-color: $_white;
+$secondary-color-dark: $_white-dark-1-level;
+$link-color: $_green_with_gray;
+$link-color-hover: $_green;
+$breadcrumb-active-color: $_green_dark_1_level;
+$title-text-color: $_green_with_gray_dark;
+
+
+//sizes
+$button-padding: 1rem;
+$radius: 2rem;
+$input-focus-border:0.15rem;
+$input-focus-box-shadow:8px;

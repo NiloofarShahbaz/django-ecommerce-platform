@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mt-1 pl-5" href="#">
+        <div>
+            <img src="{% static 'images/origami.png' %}" width="33" height="33" class="d-inline-block" alt="">
+            <span>
+              <span class="text-white brand">دست</span><span class="text-secondary brand">سازه</span>
+          </span>
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav pr-3 mt-2 mt-lg-0 text-right">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">خانه<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">درباره ما</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">بلاگ</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 pr-3 ml-auto">
+            <div class="input-group flex-md-row flex-column align-items-start">
+                <div class="">
+                    <input class="form-control" type="search" placeholder="جستجوی محصول">
+                </div>
+                <div>
+                    <button class="mr-2 btn btn-primary"><i class="fa fa-search text-white pl-1 fa-lg"></i>جستجو</button>
+                </div>
+            </div>
+        </form>
+
+        <ul class="navbar-nav pr-3 mt-2 mt-lg-0 text-right">
+            <li class="nav-item pl-4">
+                <a class="mt-1 btn btn-secondary">در دستسازه بفروش!</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">ورود</a>
+            </li>
+            <li class="nav-item">
+                <a class="mt-1 btn btn-primary text-white">ثبت نام</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
