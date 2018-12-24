@@ -13,21 +13,44 @@
     <p class="text-right">{{ category.description }}</p>
 {% endblock page_title %}
 
-{% block subcategory %}
-    <div class="col-md-9">
-        <div class="row pr-5">
-            <div class="col-12 pr-0">
-                <h4 class="text-right">دسته بندی ها</h4>
-            </div>
-            {% for subcategory in subcategories %}
-                <div class="card col-md-2 ml-3 mb-3 px-0 ">
-                    <img class="card-img-top" src="{{ subcategory.image.url }}" style="height: 10rem;">
-                    <div class="card-body text-right">
-                        <h5 class="card-title">{{ subcategory.name }}</h5>
-                        <a href="#">مشاهده همه</a>
-                    </div>
+{% block products %}
+    <div class="col-md mr-3">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-md-3 col-sm-4 col-6 pl-3 pr-0 pb-3">
+                    <a href="#" class="link-card">
+                        <div class="card shadow-sm text-right">
+                            <img class="card-img-top" src="{{ product.image.url }}">
+                            <div class="card-body pb-0">
+                                <h5 class="card-title text-primary text-truncate">{{ product.name }}</h5>
+                                <p class="text-left mb-0">
+                                    <span class="number price text-secondary">{{ product.price }}</span>
+                                    <span class="toman text-secondary">تومان</span>
+                                </p>
+                                <div class="d-flex flex-wrap">
+                                        <img src="{{ product.store.logo.url }}" class="rounded-circle  store-logo ml-2 mb-1">
+                                        <p class="store-name text-truncate text-muted mb-1">{{ product.store.name }}</p>
+                                </div>
+                                <div class="d-flex flex-wrap" style="line-height: 1em;direction: ltr;">
+
+
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star text-warning"></i>
+                                    <i class="fas fa-star-half-alt text-warning"></i>
+
+                                    <p class="number ratings nowrap ">(102 نفر)</p>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </a>
                 </div>
             {% endfor %}
         </div>
     </div>
-{% endblock subcategory %}
+{% endblock products %}
+

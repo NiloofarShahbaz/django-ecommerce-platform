@@ -1,15 +1,26 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'products/css/category_details.css' %}">
+{% endblock css %}
+
+{% block js %}
+    <script src="{% static 'products/js/category_details.js' %}"></script>
+{% endblock js %}
+
+
 {% block content %}
-    <div class="row">
+    <div class="row mx-xl-5">
         {% block breadcrumb %}
         {% endblock breadcrumb %}
     </div>
-    <div class="row">
+    <div class="row mx-xl-5 px-xl-5">
         <div class="col-12 mb-4">
             {% block page_title %}
             {% endblock page_title %}
         </div>
-        <div class="col">
+        <div class="col-md-3">
             <div class="card">
                 <div class="card-body">
                     col1
@@ -17,8 +28,8 @@
             </div>
         </div>
 
-                {% block subcategory %}
-                {% endblock subcategory %}
+        {% block products %}
+        {% endblock products %}
 
     </div>
 {% endblock content %}

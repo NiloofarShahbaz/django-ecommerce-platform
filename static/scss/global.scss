@@ -19,6 +19,7 @@ html, body {
 .brand {
   font-family: $icon-font !important;
   font-size: $_navbar-brand-font-size;
+  color: $navbar-brand-color;
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
@@ -32,6 +33,10 @@ h1, h2, h3, h4, h5, h6, b, strong {
 
 .text-secondary {
   color: $secondary-text-color !important;
+}
+
+.text-muted {
+  color: $muted-text-color !important;
 }
 
 .nav-item {

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'IRANSans-Bold';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: 'IRANSans-Regular';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Regular.ttf") format("truetype");
+  font-weight: normal !important;
+  font-style: normal; }
+@font-face {
+  font-family: 'IRANSans-PersianNumbers';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Persian_Numbers.otf") format("opentype");
+  font-style: normal;
+  unicode-range: U+0030-003A; }
+@font-face {
+  font-family: 'A-Negaar';
+  src: url("/static/fonts/ANegaar.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 38vw; }
+
+.card {
+  transition: all 0.3s; }
+
+.link-card:hover {
+  text-decoration: none; }
+
+.store-logo {
+  object-fit: cover;
+  width: 2.5rem;
+  height: 2.5rem; }
+
+.store-name {
+  font-size: 10px;
+  line-height: 3.2em;
+  max-width: 150px; }
+
+.ratings {
+  font-size: 11px;
+  line-height: 1.3em;
+  color: #616161; }
+
+.price {
+  font-size: 20px;
+  font-weight: bolder; }
+
+.toman {
+  font-size: 9px; }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 24vw; } }
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 15vw; } }
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 14vw; } }
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-img-top {
+    height: 14vw; } }
+
+/*# sourceMappingURL=category_details.css.map */
