@@ -1,0 +1,17 @@
+@import "../../../../static/scss/variables";
+
+.card-header{
+  background-color: $primary-color;
+}
+
+.subcat-text{
+  font-size: 15px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.active{
+  color: $link-color-hover;
+  font-size: 19px;
+}

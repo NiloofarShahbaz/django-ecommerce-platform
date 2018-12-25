@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".card").hover(
+    $(".link-card .card").hover(
         function () {
             $(this).addClass('shadow-lg').css('cursor','pointer');
         },function () {
