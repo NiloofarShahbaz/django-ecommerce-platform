@@ -15,4 +15,14 @@ def category_details(request, category_id):
         'products': products
     }
 
-    return render(request, 'products/category_details.html', context)
+    return render(request, 'products/category_details/category_details.html', context)
+
+
+def product_details(request, category_id, product_id):
+    category = Category.objects.get(id=category_id)
+    product = Product.objects.get(id=product_id, subcategory__category=category)
+    context = {
+        'category': category,
+        'product': product
+    }
+    return render(request, 'products/product_details/product_details.html', context)

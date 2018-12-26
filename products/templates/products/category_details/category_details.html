@@ -1,4 +1,4 @@
-{% extends 'products/base.html' %}
+{% extends 'products/category_details/base.html' %}
 
 {% block breadcrumb %}
     <nav aria-label="breadcrumb">
@@ -14,7 +14,7 @@
 {% endblock page_title %}
 
 {% block filter %}
-    {% include 'products/category_filter.html'%}
+    {% include 'products/category_details/category_filter.html' %}
 {% endblock filter %}
 
 {% block products %}
@@ -22,9 +22,9 @@
         <div class="row">
             {% for product in products.qs %}
                 <div class="col-md-3 col-sm-4 col-6 pl-3 pr-0 pb-3">
-                    <a href="#" class="link-card">
+                    <a href="{% url 'product_details' category.id product.id %}" class="link-card">
                         <div class="card shadow-sm text-right">
-                            <img class="card-img-top" src="{{ product.image.url }}">
+                            <img class="card-img-top" src="{{ product.productimage_set.first.photo.url }}">
                             <div class="card-body pb-0">
                                 <h5 class="card-title text-primary text-truncate">{{ product.name }}</h5>
                                 <p class="text-left mb-0">

@@ -1,0 +1,45 @@
+{% extends 'products/product_details/base.html' %}
+
+{% block breadcrumb %}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">خانه</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'category_details' category.id %}"> {{ category.name }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"> {{ product.name }}</li>
+        </ol>
+    </nav>
+{% endblock %}
+
+{% block detail %}
+    <div class="col-xl-10">
+        <div class="card shadow-sm text-right">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-xl-4 col-md-5">
+                        {% include 'products/product_details/product_images.html' %}
+                    </div>
+                    <div class="col mr-sm-2 mt-5">
+                        <div class="border-bottom pb-2">
+                            <h2 class="mb-5">{{ product.name }}</h2>
+                            <h3>
+                                <span class="text-danger number font-weight-bold">{{ product.price }}</span>
+                                <span class="text-danger">تومان</span>
+                            </h3>
+                            <p class="pt-2 mb-0 product-description text-secondary">توضیحات:</p>
+                            <span class="mt-0 text-less">{{ product.description | linebreaks }}</span>
+                            <p class="mt-4"><span class="text-secondary">موجودی: </span><span class="number">{{ product.quantity }} عدد</span></p>
+                        </div>
+                        <div class="border-bottom pt-2">
+                            <div class="d-flex flex-wrap">
+                                <img src="{{ product.store.logo.url }}" class="rounded-circle  store-logo ml-2 mb-1">
+                                <p class="store-name text-truncate text-muted mb-1">{{ product.store.name }}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock detail %}

@@ -18,17 +18,9 @@
   src: url("/static/fonts/ANegaar.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-.card-header {
-  background-color: #74BC04; }
+.carousel-indicators li {
+  background-color: #666666; }
+.carousel-indicators .active {
+  background-color: #d9d9d9; }
 
-.subcat-text {
-  font-size: 13px; }
-
-a:hover {
-  text-decoration: none; }
-
-.active {
-  color: #74BC04;
-  font-size: 16px; }
-
-/*# sourceMappingURL=category_filter.css.map */
+/*# sourceMappingURL=product_images.css.map */

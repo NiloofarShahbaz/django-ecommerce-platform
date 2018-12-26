@@ -5,7 +5,7 @@ from django.utils.safestring import mark_safe
 
 class CustomLinkWidget(LinkWidget):
     def option_string(self):
-        return '<div class="mr-2">' \
+        return '<div class="mr-4">' \
                '<i class="fas fa-angle-left text-secondary ml-1"></i>' \
                '<a%(attrs)s href="?%(query_string)s">%(label)s</a>' \
                '</div>'

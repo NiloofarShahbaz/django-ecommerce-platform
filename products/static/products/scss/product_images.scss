@@ -1,0 +1,10 @@
+@import "../../../../static/scss/variables";
+
+.carousel-indicators {
+  li{
+    background-color: $muted-text-color;
+  }
+  .active{
+    background-color: $secondary-color-dark;
+  }
+}

@@ -30,6 +30,7 @@ class Store(models.Model):
     description = models.TextField(verbose_name=_('توضیحات'), blank=True, null=True)
     policy = models.TextField(verbose_name=_('قوانین و مقررات'), blank=True, null=True)
     creation_date = models.DateTimeField(verbose_name=_('تاریخ ایجاد'), auto_now_add=True)
+
     # TODO : total_rate
     # TODO : total buyers
 
@@ -93,7 +94,6 @@ class SubCategory(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=1000, verbose_name=_('نام'))
     slug = models.SlugField(unique=True, editable=False)
-    image = models.ImageField(verbose_name=_('تصویر'), upload_to='products/category/image')
     description = models.TextField(verbose_name=_('توضیحات'), blank=True, null=True)
     overview = models.TextField(verbose_name=_('توضیحات'), blank=True, null=True)
     price = models.IntegerField(verbose_name=_('قیمت'))
@@ -125,3 +125,11 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         self.slug = self.get_unique_slug()
         super(Product, self).save(*args, **kwargs)
+
+
+class ProductImage(models.Model):
+    photo = models.ImageField(verbose_name=_('تصویر'), upload_to='products/category/image')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name=_('محصول'))
+
+    def __str__(self):
+        return self.product.name + " " + "IMAGE"

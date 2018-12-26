@@ -1,4 +1,4 @@
 $(document).ready(function () {
-    $(".selected").parents('div .mr-2').addClass('mr-4');
-    $(".selected").addClass('active')
+    $(".selected").parent('div .mr-4').addClass('pr-5');
+    $(".selected").addClass('active');
 });

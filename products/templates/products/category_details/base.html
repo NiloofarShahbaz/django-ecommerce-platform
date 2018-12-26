@@ -3,10 +3,13 @@
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'products/css/category_details.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'products/css/category_filter.css' %}">
 {% endblock css %}
 
 {% block js %}
     <script src="{% static 'products/js/category_details.js' %}"></script>
+    <script src="{% static 'products/js/category_filter.js' %}"></script>
+
 {% endblock js %}
 
 
@@ -20,11 +23,9 @@
             {% block page_title %}
             {% endblock page_title %}
         </div>
-        <div class="col-md-3">
-            <div class="card text-right shadow-sm">
+        <div class="col-md-3 mb-4">
                 {% block filter %}
                 {% endblock filter %}
-            </div>
         </div>
 
         {% block products %}

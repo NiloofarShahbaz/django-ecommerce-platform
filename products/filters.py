@@ -1,10 +1,11 @@
-from django_filters import FilterSet, ModelChoiceFilter
+from django_filters import FilterSet, ModelChoiceFilter, NumericRangeFilter
 from .widgets import CustomLinkWidget
 from .models import Product, SubCategory
 
 
 class ProductFilter(FilterSet):
     subcategory = ModelChoiceFilter(widget=CustomLinkWidget(attrs={'class': 'subcat-text d-flex flex-column'}))
+    price = NumericRangeFilter()
 
     def __init__(self, *args, **kwargs):
         category_id = kwargs.pop('category_id', None)
@@ -13,4 +14,4 @@ class ProductFilter(FilterSet):
 
     class Meta:
         model = Product
-        fields = ['subcategory']
+        fields = ['subcategory', 'price']

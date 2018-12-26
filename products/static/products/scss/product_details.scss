@@ -1,0 +1,56 @@
+@import "../../../../static/scss/variables";
+
+.product-img {
+  object-fit: cover;
+  width: 100%;
+  height: 60vw;
+}
+
+.product-description{
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+span.elipsis {
+    display:none;
+}
+
+.store-logo{
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+}
+
+.store-name{
+  font-size: 15px;
+  line-height: 2.7em;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .product-img {
+    height: 50vw;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .product-img {
+    height: 36vw;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .product-img {
+    height: 29vw;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .product-img {
+    height: 24vw;
+  }
+}
