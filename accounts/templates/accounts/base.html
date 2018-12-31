@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block js %}
+    <script src="{% static 'accounts/js/form.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+
+    <div class="row justify-content-center mb-5 mt-5">
+        <div class="col-lg-5 col-md-7 col-sm-9 mb-5">
+            <div class="card shadow-sm text-right">
+                <div class="card-header">
+                    {% block page_title %}
+                    {% endblock page_title %}
+                </div>
+                <div class="card-body">
+                    {% block form %}
+                    {% endblock form %}
+                </div>
+                <div class="card-footer text-muted">
+                    {% block card-footer %}
+                    {% endblock card-footer %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

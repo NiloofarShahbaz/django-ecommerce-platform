@@ -5,7 +5,7 @@
         <div>
             <img src="{% static 'images/origami.png' %}" width="33" height="33" class="d-inline-block" alt="">
             <span>
-              <span class="text-white brand">دست</span><span class="brand">سازه</span>
+              <span class="text-white brand">فل</span><span class="brand">ان</span>
           </span>
         </div>
     </a>
@@ -32,22 +32,59 @@
                     <input class="form-control" type="search" placeholder="جستجوی محصول">
                 </div>
                 <div>
-                    <button class="mr-2 btn btn-primary"><i class="fa fa-search text-white pl-1 fa-lg"></i>جستجو</button>
+                    <button class="mr-2 btn btn-primary"><i class="fa fa-search text-white pl-1 fa-lg"></i>جستجو
+                    </button>
                 </div>
             </div>
         </form>
 
         <ul class="navbar-nav pr-3 mt-2 mt-lg-0 text-right">
             <li class="nav-item pl-4">
-                <a class="mt-1 btn btn-secondary">در دستسازه بفروش!</a>
+                <a class="mt-1 btn btn-secondary">در فلان بفروش!</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">ورود</a>
-            </li>
-            <li class="nav-item">
-                <a class="mt-1 btn btn-primary text-white">ثبت نام</a>
-            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary font-weight-bold" href="#"
+                       id="navbarDropdownMenuLink" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% if user.profile.avatar %}
+                            <img class="rounded-circle avatar" src="{{ user.profile.avatar.url }}">
+                        {% else %}
+                            <img class="rounded-circle avatar" src="{% static 'images/avatar.png' %}">
+                        {% endif %}
+                        {% if user.first_name %}
+                            سلام {{ user.first_name }}
+                        {% else %}
+                            سلام {{ user.username }}@
+                        {% endif %}
+                    </a>
+                    <div class="dropdown-menu bg-dark text-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-white" href="#">
+                            <i class="fas fa-user text-white ml-1 pt-2"></i>
+                            صفحه کاربری
+                        </a>
+                        <a class="dropdown-item text-white" href="#">Another action</a>
+                        <a class="dropdown-item text-white" href="{% url 'logout' %}">
+                            <i class="text-white fas fa-sign-out-alt ml-1 pt-2"></i>
+                            خروج
+                        </a>
+                    </div>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'login' %}">
+                        <i class="text-white fas fa-sign-in-alt"></i>
+                        ورود
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'signup' %}" class="mt-1 btn btn-primary text-white">
+                        <i class="text-white fas fa-user-plus"></i>
+                        ثبت نام
+                    </a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

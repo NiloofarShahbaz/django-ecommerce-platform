@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
+from accounts.models import Profile
 
 class Rating:
     VERY_BAD = '1'
@@ -21,6 +21,7 @@ class Rating:
 
 
 class Store(models.Model):
+    profile = models.OneToOneField(Profile, on_delete=models.CASCADE)
     name = models.CharField(max_length=500, verbose_name=_('نام'), unique=True)
     slug = models.SlugField(unique=True, editable=False)
     logo = models.ImageField(verbose_name=_('لوگو'), upload_to='products/store/logo', null=True, blank=True)

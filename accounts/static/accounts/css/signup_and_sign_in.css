@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'IRANSans-Bold';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: 'IRANSans-Regular';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Regular.ttf") format("truetype");
+  font-weight: normal !important;
+  font-style: normal; }
+@font-face {
+  font-family: 'IRANSans-PersianNumbers';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Persian_Numbers.otf") format("opentype");
+  font-style: normal;
+  unicode-range: U+0030-003A; }
+@font-face {
+  font-family: 'A-Negaar';
+  src: url("/static/fonts/ANegaar.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+.is_valid {
+  border-color: red;
+  color: red; }
+
+/*# sourceMappingURL=signup_and_sign_in.css.map */

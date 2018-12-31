@@ -1,0 +1,41 @@
+@import "variables";
+
+.dropdown-item:hover {
+  background-color: $primary-color !important;
+}
+
+.avatar {
+  object-fit: cover;
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
+.navbar2 {
+  border-bottom: 2px black;
+}
+
+.nav-item {
+  font-size: $_navitem-font-size;
+  cursor: pointer !important;
+  .nav-link:hover {
+    color: $nav-link-color-hover !important;
+  }
+  .active {
+    color: $nav-link-color-active !important;
+  }
+  .active:hover {
+    cursor: default;
+    color: $nav-link-color-active !important;
+  }
+}
+
+.brand {
+  cursor: default;
+  font-family: $icon-font !important;
+  font-size: $_navbar-brand-font-size;
+  color: $navbar-brand-color;
+}
+
+.login-icon-hover {
+  color: $nav-link-color-hover !important;
+}

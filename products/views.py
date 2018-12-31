@@ -26,3 +26,7 @@ def product_details(request, category_id, product_id):
         'product': product
     }
     return render(request, 'products/product_details/product_details.html', context)
+
+
+def home(request):
+    pass

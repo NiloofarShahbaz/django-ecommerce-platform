@@ -31,11 +31,6 @@ html, body {
 .number {
   font-family: IRANSans-PersianNumbers, IRANSans-Regular !important; }
 
-.brand {
-  font-family: A-Negaar !important;
-  font-size: 3rem;
-  color: #A8E83A; }
-
 h1, h2, h3, h4, h5, h6, b, strong {
   font-family: IRANSans-Bold !important;
   color: #616161; }
@@ -48,15 +43,6 @@ h1, h2, h3, h4, h5, h6, b, strong {
 
 .text-muted {
   color: #666666 !important; }
-
-.nav-item {
-  font-size: 1.1rem; }
-  .nav-item .nav-link:hover {
-    color: #74BC04 !important; }
-  .nav-item .active {
-    color: #A8E83A !important; }
-  .nav-item .active:hover {
-    color: #A8E83A !important; }
 
 input {
   border-radius: 2rem !important;
@@ -91,9 +77,6 @@ input:focus {
   border-color: #d9d9d9;
   color: #111111; }
 
-.navbar2 {
-  border-bottom: 2px black; }
-
 .breadcrumb {
   background-color: transparent; }
   .breadcrumb .active {
@@ -105,5 +88,11 @@ a {
 
 a:hover {
   color: #74BC04; }
+
+.card-footer {
+  background-color: transparent; }
+
+.card-header {
+  background-color: transparent; }
 
 /*# sourceMappingURL=global.css.map */

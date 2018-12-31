@@ -16,12 +16,6 @@ html, body {
   font-family: $number-font, $text-font !important;
 }
 
-.brand {
-  font-family: $icon-font !important;
-  font-size: $_navbar-brand-font-size;
-  color: $navbar-brand-color;
-}
-
 h1, h2, h3, h4, h5, h6, b, strong {
   font-family: $header-font !important;
   color: $title-text-color;
@@ -39,18 +33,6 @@ h1, h2, h3, h4, h5, h6, b, strong {
   color: $muted-text-color !important;
 }
 
-.nav-item {
-  font-size: $_navitem-font-size;
-  .nav-link:hover {
-    color: $nav-link-color-hover !important;
-  }
-  .active{
-  color: $nav-link-color-active !important;
-  }
-  .active:hover {
-  color: $nav-link-color-active !important;
-  }
-}
 
 input {
   border-radius: $radius !important;
@@ -91,9 +73,6 @@ input:focus {
   color: $primary-text-color;
 
 }
-.navbar2 {
-  border-bottom: 2px black;
-}
 
 .breadcrumb{
   background-color: transparent;
@@ -109,3 +88,13 @@ a{
 a:hover{
   color: $link-color-hover;
 }
+
+.card-footer {
+  background-color: transparent;
+}
+
+.card-header {
+  background-color: transparent;
+}
+
+

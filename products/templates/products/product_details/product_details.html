@@ -1,4 +1,9 @@
 {% extends 'products/product_details/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+{{ product.name}}
+{% endblock title %}
 
 {% block breadcrumb %}
     <nav aria-label="breadcrumb">

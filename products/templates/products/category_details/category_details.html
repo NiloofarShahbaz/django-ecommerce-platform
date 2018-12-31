@@ -1,5 +1,9 @@
 {% extends 'products/category_details/base.html' %}
 
+{% block title %}
+    {{ category.name }}
+{% endblock title %}
+
 {% block breadcrumb %}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">

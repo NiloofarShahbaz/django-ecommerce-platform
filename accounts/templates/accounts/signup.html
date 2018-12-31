@@ -1,0 +1,29 @@
+{% extends 'accounts/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block page_title %}
+    <h1 class="text-center text-secondary">ثبت نام</h1>
+{% endblock page_title %}
+
+{% block form %}
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {% include 'accounts/forms.html' %}
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">ثبت نام</button>
+            </div>
+        </div>
+    </form>
+{% endblock form %}
+
+{% block card-footer %}
+    <p class="text-muted">
+        قبلا ثبت نام کرده اید؟
+        <a href="{% url 'login' %}">وارد شوید</a>
+    </p>
+{% endblock card-footer %}

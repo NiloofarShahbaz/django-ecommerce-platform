@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'IRANSans-Bold';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+@font-face {
+  font-family: 'IRANSans-Regular';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Regular.ttf") format("truetype");
+  font-weight: normal !important;
+  font-style: normal; }
+@font-face {
+  font-family: 'IRANSans-PersianNumbers';
+  src: url("/static/fonts/IRANSans/IRANSansWeb_Persian_Numbers.otf") format("opentype");
+  font-style: normal;
+  unicode-range: U+0030-003A; }
+@font-face {
+  font-family: 'A-Negaar';
+  src: url("/static/fonts/ANegaar.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+.dropdown-item:hover {
+  background-color: #74BC04 !important; }
+
+.avatar {
+  object-fit: cover;
+  width: 2.7rem;
+  height: 2.7rem; }
+
+.navbar2 {
+  border-bottom: 2px black; }
+
+.nav-item {
+  font-size: 1.1rem;
+  cursor: pointer !important; }
+  .nav-item .nav-link:hover {
+    color: #74BC04 !important; }
+  .nav-item .active {
+    color: #A8E83A !important; }
+  .nav-item .active:hover {
+    cursor: default;
+    color: #A8E83A !important; }
+
+.brand {
+  cursor: default;
+  font-family: A-Negaar !important;
+  font-size: 3rem;
+  color: #A8E83A; }
+
+.login-icon-hover {
+  color: #74BC04 !important; }
+
+/*# sourceMappingURL=navbar.css.map */
