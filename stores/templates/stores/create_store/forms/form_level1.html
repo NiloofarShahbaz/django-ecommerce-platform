@@ -1,0 +1,39 @@
+{% load widget_tweaks %}
+
+
+<div class="form-group mb-4">
+    <h6>{{ form.name.label_tag }}</h6>
+
+    {% if form.is_bound %}
+        {% if form.name.errors %}
+            {% render_field form.name class="form-control is-invalid" %}
+            {% for error in form.name.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% else %}
+            {% render_field form.name class="form-control is-valid" %}
+        {% endif %}
+    {% else %}
+        {% render_field form.name class="form-control" %}
+    {% endif %}
+
+    <h6 class="mt-4">{{ form.city.label_tag }}</h6>
+
+    {% if form.is_bound %}
+        {% if form.city.errors %}
+            {% render_field form.city class="form-control is-invalid" %}
+            {% for error in form.city.errors %}
+                <div class="invalid-feedback">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% else %}
+            {% render_field form.city class="form-control is-valid" %}
+        {% endif %}
+    {% else %}
+        {% render_field form.city class="form-control" %}
+    {% endif %}
+
+</div>

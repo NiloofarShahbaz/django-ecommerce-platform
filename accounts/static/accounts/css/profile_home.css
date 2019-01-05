@@ -18,35 +18,20 @@
   src: url("/static/fonts/ANegaar.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-.dropdown-item:hover {
-  background-color: #74BC04 !important; }
-
-.avatar {
+.profile-avatar {
   object-fit: cover;
-  width: 2.5rem;
-  height: 2.5rem; }
+  width: 12rem;
+  height: 12rem; }
 
-.navbar2 {
-  border-bottom: 2px black; }
+.edit-icon {
+  right: 110px;
+  top: 110px;
+  font-size: 1.5rem;
+  line-height: 1.8em; }
 
-.nav-item {
-  font-size: 1.1rem;
-  cursor: pointer !important; }
-  .nav-item .nav-link:hover {
-    color: #74BC04 !important; }
-  .nav-item .active {
-    color: #A8E83A !important; }
-  .nav-item .active:hover {
-    cursor: default;
-    color: #A8E83A !important; }
+.store-logo {
+  object-fit: cover;
+  width: 3.2rem;
+  height: 3.2rem; }
 
-.brand {
-  cursor: default;
-  font-family: A-Negaar !important;
-  font-size: 3rem;
-  color: #A8E83A; }
-
-.login-icon-hover {
-  color: #74BC04 !important; }
-
-/*# sourceMappingURL=navbar.css.map */
+/*# sourceMappingURL=profile_home.css.map */

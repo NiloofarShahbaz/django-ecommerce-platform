@@ -1,0 +1,36 @@
+@import "../../../../static/scss/variables";
+
+.progress {
+  border-radius: 2rem;
+  .active {
+    background-color: $primary-color;
+  }
+}
+
+.progress-bar {
+  background-color: $secondary-color-darker;
+}
+
+.icon {
+  float: left;
+  margin-left: 4px;
+  margin-top: -29px;
+}
+
+.dropzone {
+  border: 0.3rem dashed $primary-color !important;
+  min-height: 230px !important;
+  .dz-message {
+    margin-top: 5.1em !important;
+  }
+}
+
+.dz-max-files-reached {
+  pointer-events: none;
+  cursor: default;
+}
+
+.dz-remove {
+  pointer-events: all;
+  cursor: default;
+}

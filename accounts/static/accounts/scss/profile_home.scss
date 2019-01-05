@@ -1,0 +1,22 @@
+@import "../../../../static/scss/variables";
+
+
+.profile-avatar{
+  object-fit: cover;
+  width: 12rem;
+  height: 12rem;
+}
+
+.edit-icon{
+  right: 110px;
+  top: 110px;
+  font-size: 1.5rem;
+  line-height: 1.8em;
+
+}
+
+.store-logo{
+  object-fit: cover;
+  width: 3.2rem;
+  height: 3.2rem;
+}

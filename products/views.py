@@ -30,3 +30,5 @@ def product_details(request, category_id, product_id):
 
 def home(request):
     pass
+
+

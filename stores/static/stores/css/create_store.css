@@ -18,8 +18,31 @@
   src: url("/static/fonts/ANegaar.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
-.is_valid {
-  border-color: red;
-  color: red; }
+.progress {
+  border-radius: 2rem; }
+  .progress .active {
+    background-color: #74BC04; }
 
-/*# sourceMappingURL=signup_and_sign_in.css.map */
+.progress-bar {
+  background-color: #bfbfbf; }
+
+.icon {
+  float: left;
+  margin-left: 4px;
+  margin-top: -29px; }
+
+.dropzone {
+  border: 0.3rem dashed #74BC04 !important;
+  min-height: 230px !important; }
+  .dropzone .dz-message {
+    margin-top: 5.1em !important; }
+
+.dz-max-files-reached {
+  pointer-events: none;
+  cursor: default; }
+
+.dz-remove {
+  pointer-events: all;
+  cursor: default; }
+
+/*# sourceMappingURL=create_store.css.map */

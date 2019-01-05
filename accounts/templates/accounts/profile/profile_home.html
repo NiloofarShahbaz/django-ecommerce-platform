@@ -1,0 +1,132 @@
+{% extends 'accounts/profile/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    صفحه کاربری  {{ user.username }}
+{% endblock title %}
+
+{% block bio %}
+    <div class="card shadow text-right">
+        <div class="card-body">
+            <div class="d-flex flex-wrap">
+                <div class="d-flex ml-4">
+                    <div class="ml-0 pl-0 position-relative">
+                        {% if user.profile.avatar %}
+                            <img class="profile-avatar border-light rounded-circle" src="{{ user.profile.avatar.url }}">
+                        {% else %}
+                            <img class="profile-avatar border-light rounded-circle"
+                                 src="{% static 'images/avatar.png' %}">
+                        {% endif %}
+                        <button type="button" class="btn btn-light rounded-circle text-center border-secondary
+                        position-absolute edit-icon" data-toggle="tooltip" data-placement="bottom"
+                                title="تغییر عکس پروفایل">
+                            <i class="fas text-muted fa-camera"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="mt-4 d-flex flex-column">
+                    <div class="d-flex flex-row border-bottom">
+                        <h4 class="ml-1 text-secondary">نام کاربری:</h4>
+                        <h4>{{ user.username }}<i class="fas fa-at text-muted"></i></h4>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" role="button" class="btn btn-primary">
+                            <i class="text-white fas fa-lock"></i>
+                            تغییر رمز
+                        </a>
+                    </div>
+                    <div class="mt-2">
+                        <a href="{% url 'logout' %}" role="button" class="btn btn-primary">
+                            <i class="text-white fas fa-sign-out-alt"></i>
+                            خروج از حساب کاربری
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+{% endblock bio %}
+
+
+{% block about %}
+    <div class="card shadow text-right">
+        <div class="card-header row mx-4 mt-1">
+            <h4>مشخصات فردی
+                <a href="#" data-toggle="tooltip" data-placement="top" title="ویرایش مشخصات فردی">
+                    <i class="fas text-muted fa-edit"></i>
+                </a>
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row mx-4">
+                <div class="col">
+                    <div class="row">
+                        <h5 class="text-secondary">نام و نام خانوادگی:</h5>
+                        <h5 class="mr-1">
+                            {% if user.get_full_name %}
+                                {{ user.get_full_name }}
+                            {% else %}
+                                وارد نشده
+                            {% endif %}
+                        </h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <h5 class="text-secondary">پست الکترونیکی:</h5>
+                        <h5 class="mr-1">
+                            {{ user.email }}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-4 mt-3">
+                <div class="col">
+                    <div class="row">
+                        <h5 class="text-secondary">شماره تلفن همراه:</h5>
+                        <h5 class="mr-1">
+                            {% if user.profile.tel %}
+                                {{ user.profile.tel }}
+                            {% else %}
+                                وارد نشده
+                            {% endif %}
+                        </h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <h5 class="text-secondary">نقش:</h5>
+                        <h5 class="mr-1">
+                            {{ user.profile.get_role_display }}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-4 mt-3">
+                <h5 class="text-secondary">آدرس:</h5>
+                <h5 class="mr-1">
+                    {% if user.profile.address %}
+                        {{ user.profile.address }}
+                    {% else %}
+                        وارد نشده
+                    {% endif %}
+                </h5>
+            </div>
+            {% if user.profile.role == 'BO' %}
+                <div class="row mx-4 mt-3">
+                    <h5 class="text-secondary">فروشگاه:</h5>
+                    <h5 class="mr-1">
+                        <a class="text-muted shadow-sm p-2 border" href="#">
+                            <img src="{{ user.profile.store.logo.url }}" class="rounded-circle store-logo">{{ user.profile.store.name }}
+                        </a>
+                    </h5>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock about %}

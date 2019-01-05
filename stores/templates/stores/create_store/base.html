@@ -1,0 +1,30 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stores/css/create_store.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/dropzone/dist/min/dropzone.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bower_components/dropzone/dist/min/basic.min.css' %}">
+
+{% endblock css %}
+
+{% block js %}
+    <script src="{% static 'stores/js/create_store_form1.js' %}"></script>
+    <script src="{% static 'bower_components/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{% static 'stores/js/create_store_form2.js' %}"></script>
+
+{% endblock js %}
+
+
+{% block content %}
+    <div class="row mx-xl-5 px-xl-5 pt-5 mt-3 justify-content-center">
+        <div class="col-8 mb-5">
+            {% block progress_bar %}
+            {% endblock progress_bar %}
+        </div>
+        <div class="col-md-6 mb-4">
+            {% block form_card %}
+            {% endblock form_card %}
+        </div>
+    </div>
+{% endblock content %}

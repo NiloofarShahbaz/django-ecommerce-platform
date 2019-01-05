@@ -39,9 +39,18 @@
         </form>
 
         <ul class="navbar-nav pr-3 mt-2 mt-lg-0 text-right">
-            <li class="nav-item pl-4">
-                <a class="mt-1 btn btn-secondary">در فلان بفروش!</a>
-            </li>
+            {% if user.is_authenticated %}
+                {% if user.profile.role == 'BU' %}
+                    <li class="nav-item pl-4">
+                        <a href="#" class="mt-2 btn btn-secondary">در فلان بفروش!</a>
+                    </li>
+                {% else %}
+                {% endif %}
+            {% else %}
+                <li class="nav-item pl-4">
+                    <a href="#" class="mt-2 btn btn-secondary">در فلان بفروش!</a>
+                </li>
+            {% endif %}
 
             {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
@@ -60,11 +69,10 @@
                         {% endif %}
                     </a>
                     <div class="dropdown-menu bg-dark text-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item text-white" href="#">
+                        <a class="dropdown-item text-white" href="{% url 'profile_home' %}">
                             <i class="fas fa-user text-white ml-1 pt-2"></i>
                             صفحه کاربری
                         </a>
-                        <a class="dropdown-item text-white" href="#">Another action</a>
                         <a class="dropdown-item text-white" href="{% url 'logout' %}">
                             <i class="text-white fas fa-sign-out-alt ml-1 pt-2"></i>
                             خروج
